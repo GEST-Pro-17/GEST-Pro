@@ -362,3 +362,101 @@ body {
         padding: 15px;
     }
 }
+
+
+/* --- ADAPTATION MOBILE (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Menu de navigation responsive */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .logo-text {
+        max-width: 160px;
+        height: auto;
+    }
+    
+    .logo-icon {
+        width: 60px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+
+    /* Section Hero (Bannière d'accueil) */
+    .hero-section {
+        padding: 70px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        margin: 5px 0;
+    }
+
+    /* Section Qui Sommes-Nous */
+    .intro-container {
+        flex-direction: column !important;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .lead {
+        text-align: center;
+    }
+
+    /* Grille de nos expertises */
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Noms des marques en bas */
+    .brands-logos-placeholder {
+        gap: 20px;
+        font-size: 1.1rem;
+    }
+    
+    .main-footer {
+        padding: 20px;
+        text-align: center;
+    }
+}
