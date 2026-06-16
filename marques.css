@@ -9,6 +9,11 @@
     --white: #ffffff;
     --transition-smooth: all 0.3s ease;
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     font-family:  Arial, sans-serif;
@@ -246,3 +251,89 @@ body {
     color: var(--white);
     text-decoration: underline;
 }
+
+/* --- ADAPTATION MOBILE (RESPONSIVE) --- */
+@media (max-width: 768px) {
+   /* Menu de navigation responsive */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .logo-text {
+        max-width: 160px;
+        height: auto;
+    }
+    
+    .logo-icon {
+        width: 60px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+
+    /* En-tête de page */
+    .main-container {
+        padding: 30px 15px;
+    }
+
+    .page-header {
+        margin-bottom: 35px;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+    /* Force toutes les grilles de marques à passer sur 1 colonne */
+    .brands-grid, 
+    .row-3-columns, 
+    .row-2-columns {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Cartes de marque */
+    .brand-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .brand-image {
+        margin: 0 auto 15px;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 15px;
+        width: 100%;
+        max-width: 320px; 
+    
+    .brand-info {
+        padding: 0;
+    }
+    
+    .category-title {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}}
