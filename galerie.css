@@ -101,3 +101,63 @@ body {
     color: var(--white);
     text-decoration: underline;
 }
+
+/* --- ADAPTATION MOBILE (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Menu de navigation responsive */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+
+    /* Intro de la galerie */
+    .galerie-intro {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* Section Carrousel */
+    .carousel-section {
+        padding: 0 45px; /* Réduction de l'espace sur les côtés pour laisser place à l'image */
+        margin: 20px auto;
+    }
+
+    .carousel-slide img {
+        max-width: 100%;
+        height: auto; /* Supprime les 750px fixes */
+        max-height: 380px; /* Donne une hauteur idéale sur mobile */
+        border-radius: 8px;
+    }
+
+    /* Flèches du carrousel */
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    #prevBtn { left: 5px; }
+    #nextBtn { right: 5px; }
+}
