@@ -303,15 +303,40 @@ body {
 }
 
 .brands-logos-placeholder {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #cbd5e1;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  gap: 3rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.brands-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 3rem;
+  min-width: 100%;
+  animation: scroll-brands 25s linear infinite;
+}
+
+.brands-logos-placeholder span {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: #cbd5e1;
+}
+
+@keyframes scroll-brands {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% - 3rem)); }
+}
+
+/* optional: pause on hover */
+.brands-logos-placeholder:hover .brands-track {
+  animation-play-state: paused;
 }
 
 .link-more {
