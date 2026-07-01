@@ -238,11 +238,29 @@
             </div>
         </section>
     </main>
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
+      ↑
+    </button>
     <footer class="main-footer">
         <div class="container footer-content">
             <p>&copy; 2026 GEST Pro. Tous droits réservés.</p>
             <p>Besoin d'un plan d'accès exact ? Consultez notre page <a href="infos.html">Plus d'infos</a>.</p>
         </div>
     </footer>
+    <script>
+      const backToTopBtn = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
 </body>
 </html>
